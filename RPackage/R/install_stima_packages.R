@@ -11,7 +11,7 @@ install_stima_packages <- function(course = NULL){
   gs_df <- get_r_course_gsheet()  
   stima_r_courses <- get_stima_r_courses()
 
-  checkmate::assert_names(names(gs_df)[1:3], identical.to = c("R.package","CRAN..specify.nothing.Github..specify.1.Bioconductor..Specify.2","GitHub.and.Bioconductor.path"))  
+  checkmate::assert_names(names(gs_df)[1:3], identical.to = c("R package","CRAN: specify nothing Github: specify 1 Bioconductor: Specify 2","GitHub and Bioconductor path"))  
   checkmate::assert_string(course, null.ok = TRUE)
   
   if(!is.null(course)) {
